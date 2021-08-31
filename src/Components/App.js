@@ -27,6 +27,7 @@ function App() {
     handleRecipeAdd,
     handleRecipeDelete,
     handleRecipeSelect,
+    handleRecipeChange,
   };
 
   function handleRecipeSelect(id) {
@@ -43,6 +44,13 @@ function App() {
       ingredients: [{ id: uuidv4(), name: 'Name', amount: '1 Tbs' }],
     };
     setRecipes([...recipes, newRecipe]);
+  }
+
+  function handleRecipeChange(id, recipe) {
+    const newRecipes = [...recipes];
+    const index = newRecipes.findIndex((r) => r.id === id);
+    newRecipes[index] = recipe;
+    setRecipes(newRecipes);
   }
 
   function handleRecipeDelete(id) {
