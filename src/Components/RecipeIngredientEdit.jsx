@@ -13,12 +13,12 @@ function RecipeIngredientEdit(props) {
         className="recipe-edit__input"
         value={ingredient.name}
         type="text"
-        onClick={(e) => handleChange({ name: e.target.value })}
+        onChange={(e) => handleChange({ name: e.target.value })}
       />
       <input
         className="recipe-edit__input"
         value={ingredient.amount}
-        onClick={(e) => handleChange({ amount: e.target.value })}
+        onChange={(e) => handleChange({ amount: e.target.value })}
         type="text"
       />
       <button
